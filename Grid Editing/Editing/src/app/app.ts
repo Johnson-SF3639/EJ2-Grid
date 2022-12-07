@@ -52,8 +52,8 @@ let batchgrid: Grid = new Grid({
     toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode:'Batch' },
 
-    cellEdit: (args: EditEventArgs) => {
-        if (args['value'] == "Brazil") {
+    cellEdit: (args) => {
+        if (args['value'] == "Germany") {
             args.cancel = true;
         }
     },
