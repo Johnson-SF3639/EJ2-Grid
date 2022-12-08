@@ -1,0 +1,30 @@
+@import '../../node_modules/@syncfusion/ej2/material.css';
+.content{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    width: 60%;
+    margin: 1% auto;
+    background-color: antiquewhite;
+    text-align: center;
+    padding:1%;
+}
+.content_Grid, table{
+    width: 60%;
+    margin: 1% auto;
+}
+.content_Grid h2{
+    width: 100%;
+}
+td{
+    border: 2px solid rgb(165, 165, 165);
+}
+th{
+    text-align: center;
+    border: 2px solid rgb(54, 203, 64);
+}
+#group_cols{
+    background-color: rgb(165, 165, 165);
+    color: white;
+}
