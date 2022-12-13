@@ -155,7 +155,7 @@ let iGrid: Grid = new Grid({
         { field: 'OrderID', headerText: 'Order ID', isPrimaryKey:true, textAlign: 'Right', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
         { field: 'Freight', headerText: 'Freight', editType: 'numericedit', format: 'C2', width: 150, edit: { params: { change: (args :any) => {
-            let gridObj = document.getElementById('Grid')['ej2_instances'][0];
+            let gridObj = document.getElementById('InlineGrid')['ej2_instances'][0];
             selectedRecord['Freight'] = args.value; // Set the edited value to aggregate column
             gridObj.aggregateModule.refresh(selectedRecord) // Refresh aggregates using edited data
             }
