@@ -1,0 +1,33 @@
+@import '../../node_modules/@syncfusion/ej2/material.css';
+.content{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    width: 60%;
+    margin: 1% auto;
+}
+h2{
+    width: 100%;
+    margin: 1% auto;
+    background-color: rgb(255, 207, 144);
+    text-align: center;
+    padding:1%;
+}
+.sort_content{
+    text-align: center;
+    width: 100%;
+    margin: 1% auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.sort_box{
+    width: 99%;
+}
+.sort_box:nth-child(1){
+    margin-right: 1%;
+}
+.sort_box:nth-child(2){
+    margin-left: 1%;
+}
+.sort_content .e-parentmsgbar{
+    display: none
+}

@@ -1,0 +1,20 @@
+@import '../../node_modules/@syncfusion/ej2/material.css';
+#container { 
+    visibility: hidden; 
+}
+#loader { 
+    color: rgb(0, 140, 255);
+    font-family: "Helvetica Neue", calibiri;
+    font-size: 14px;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+.image img { 
+    border-radius: 50px;
+    box-shadow: rgb(224, 224, 224) 0px 0px 1px inset, rgba(0, 0, 0, 0.2) 0px 0px 14px inset;
+    height: 55px;
+    width: 55px;
+}
