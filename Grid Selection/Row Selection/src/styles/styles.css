@@ -1,0 +1,13 @@
+@import '../../node_modules/@syncfusion/ej2/material.css';
+#js-licensing{
+    display: none;
+}
+.content{
+    width: 70%;
+    margin: 0% auto;
+}
+h2{
+    background-color: rgba(0, 255, 0, 0.408);
+    padding: 1%;
+    text-align: center;
+}

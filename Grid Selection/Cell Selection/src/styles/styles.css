@@ -1,5 +1,7 @@
 @import '../../node_modules/@syncfusion/ej2/material.css';
-
+#js-licensing{
+    display: none;
+}
 .content{
     width: 70%;
     margin: 0% auto;
