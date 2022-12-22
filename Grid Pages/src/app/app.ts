@@ -4,6 +4,7 @@ import { NumericTextBox } from '@syncfusion/ej2-inputs';
 
 Grid.Inject(Page, Toolbar);
 
+
 // Paging with load
 let grid: Grid = new Grid({
     dataSource: data,
@@ -14,7 +15,7 @@ let grid: Grid = new Grid({
         { field: 'ShipCity', headerText: 'Ship City', width: 140 },
         { field: 'ShipName', headerText: 'Ship Name', width: 150 }
     ],
-    height: 335,
+    height: 180,
     load: () => {
         let rowHeight: number = grid.getRowHeight();  //height of the each row
         let gridHeight: any = grid.height;  //grid height
@@ -51,6 +52,7 @@ let tGrid: Grid = new Grid({
         { field: 'ShipName', headerText: 'Ship Name', width: 150 }
     ],
     pageSettings: { template: '#template', pageSize: 7 },
+    height: 180,
     dataBound: () => {
         if (flag) {
             flag = false;
@@ -76,24 +78,25 @@ let pGrid: Grid = new Grid({
         { field: 'ShipCity', headerText: 'Ship City', width: 150 },
         { field: 'ShipName', headerText: 'Ship Name', width: 150 }
     ],
-    pageSettings: { pageSizes: true, pageSize: 8 }
+    pageSettings: { pageSizes: true, pageSize: 8 },
+    height: 180,
 });
 pGrid.appendTo('#PGrid');
 
 
-//How to render Pager at the Top of the Grid
+// How to render Pager at the Top of the Grid
 // let initialGridLoad: boolean = true;
 // let rGrid: Grid = new Grid({
 //     dataSource: data,
 //     allowPaging: true,
-//     toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
 //     columns: [
 //         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
 //         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
 //         { field: 'ShipCity', headerText: 'Ship City', width: 150 },
 //         { field: 'ShipName', headerText: 'Ship Name', width: 150 }
 //     ],
-//     pageSettings: { pageSizes: true, pageSize: 9 }
+//     pageSettings: { pageSizes: true, pageSize: 9 },
+//     height: 180,
 // });
 // rGrid.appendTo('#RGrid');
 
@@ -103,8 +106,7 @@ pGrid.appendTo('#PGrid');
 //         var pager = document.getElementsByClassName('e-gridpager');
 //         var topElement;
 //         if (rGrid.allowGrouping || rGrid.toolbar) {
-//             topElement = rGrid.allowGrouping ? document.getElementsByClassName('e-groupdroparea') :
-//                 document.getElementsByClassName('e-toolbar');
+//             topElement = rGrid.allowGrouping ? document.getElementsByClassName('e-groupdroparea') :  document.getElementsByClassName('e-toolbar');
 //         } else {
 //             topElement = document.getElementsByClassName('e-gridheader');
 //         }
