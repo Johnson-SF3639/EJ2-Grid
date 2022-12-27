@@ -1,4 +1,4 @@
-import { Grid, RowDataBoundEventArgs, Page, Sort, Edit, Toolbar, RowDD ,RowDeselectEventArgs, RowDragEventArgs, RowSelectEventArgs } from '@syncfusion/ej2-grids';
+import { Grid, RowDataBoundEventArgs, Page, Sort, Edit, Toolbar, RowDD ,RowDeselectEventArgs, RecordDoubleClickEventArgs, RowDragEventArgs, RecordClickEventArgs, RowSelectEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 
@@ -158,6 +158,35 @@ let tgrid: Grid = new Grid({
 tgrid.appendTo('#ToolBarGrid');
 
 function toolbarClick(args: ClickEventArgs) {
-    console.log("Toolbar Click Working");
-    count+=1    
+    console.log("Toolbar Click Working"); 
 }
+
+
+
+//recordClick
+let recordGrid: Grid = new Grid({
+    dataSource: data,
+    allowPaging: true,
+    allowSelection:false,
+    allowSorting: true,
+    columns: [
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+        { field: 'Freight', headerText: 'Freight', width: 100, format: 'C2' },
+        { field: 'ShipName', headerText: 'Ship Name', width: 100 }
+    ],
+    recordClick: RecordClick,
+    recordDoubleClick: RecordDoubleClick,
+    height: 180
+});
+recordGrid.appendTo('#RecordGrid');
+
+function RecordClick(args: RecordClickEventArgs) {
+    console.log("recordClick Working");
+}
+
+function RecordDoubleClick(args: RecordDoubleClickEventArgs) {
+    console.log("RecordDoubleClick Working");
+}
+

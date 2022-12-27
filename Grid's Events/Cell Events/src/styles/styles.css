@@ -1,0 +1,22 @@
+@import '../../node_modules/@syncfusion/ej2/material.css';
+#js-licensing{
+    display: none;
+}
+body{
+    background: rgb(1,0,57);
+    background: linear-gradient(90deg, rgba(1,0,57,1) 0%, rgba(0,0,18,1) 100%, rgba(0,0,0,1) 100%);
+}
+h2{
+    background-color: rgb(75, 255, 114);
+    margin: 0;
+    padding: 1%;
+    text-align: center;
+}
+.content{
+    margin: 1% auto;
+    width: 70%;
+}
+.GridTable{
+    margin: 5%;
+    box-shadow: 8px 8px 30px rgba(55, 188, 255, 0.448);
+}
